@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#2a2438"/>
+  <text x="200" y="185" text-anchor="middle" fill="#a89bb8" font-family="Segoe UI,sans-serif" font-size="22" font-weight="600">Sad photo</text>
+  <text x="200" y="220" text-anchor="middle" fill="#6b5f7a" font-family="Segoe UI,sans-serif" font-size="14">Replace with your image</text>
+</svg>

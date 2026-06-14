@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan our date</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-date">
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <main class="container container-narrow">
+    <img src="images/date.svg" alt="Us" class="photo photo-hero">
+
+    <h1 class="title">Yay! Let's plan our date</h1>
+    <p class="subtitle">Pick a day, a time, and tell me what you'd love to do.</p>
+
+    <form id="date-form" class="date-form">
+      <label class="field">
+        <span>Date</span>
+        <input type="date" name="date" required>
+      </label>
+
+      <label class="field">
+        <span>Time</span>
+        <input type="time" name="time" required>
+      </label>
+
+      <label class="field">
+        <span>What do you want to do?</span>
+        <textarea name="activity" rows="4" placeholder="Dinner, movie, walk in the park..." required></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-yes btn-full" id="submit-btn">Send it to me</button>
+      <p class="form-status hidden" id="form-status" role="status"></p>
+    </form>
+
+    <a href="index.html" class="back-link">← Back</a>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/date-form.js"></script>
+</body>
+</html>
