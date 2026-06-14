@@ -54,7 +54,7 @@ body {
 
 .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 720px;
   margin: 0 auto;
   padding: 2rem 1.25rem 3rem;
@@ -192,6 +192,66 @@ body {
   font-size: 0.95rem;
   opacity: 0.75;
   min-height: 1.5em;
+  transition: opacity 0.2s ease;
+}
+
+.hint.guilt-flash {
+  opacity: 1;
+  color: var(--pink-dark);
+  font-weight: 600;
+  animation: guilt-shake 0.45s ease;
+}
+
+.guilt-popups {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.guilt-bubble {
+  position: fixed;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: var(--pink-dark);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--rose);
+  box-shadow: 0 6px 20px var(--shadow);
+  white-space: nowrap;
+  animation: guilt-pop 1.8s ease forwards;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes guilt-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes guilt-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(-50%, -60%) scale(1.08);
+  }
+  25% {
+    transform: translate(-50%, -75%) scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -95%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -120%) scale(0.9);
+  }
 }
 
 .hidden {

@@ -5,15 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Do you love me?</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body class="page-main">
   <div class="hearts-bg" aria-hidden="true"></div>
+  <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+
+  <div class="big-heart-wrap" aria-hidden="true">
+    <div class="big-heart">
+      <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 82 C20 58 2 42 2 26 C2 12 14 2 28 2 C38 2 46 8 50 16 C54 8 62 2 72 2 C86 2 98 12 98 26 C98 42 80 58 50 82Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
 
   <main class="container">
     <div class="photo-grid">
-      <img src="images/main-1.svg" alt="Photo 1" class="photo">
-      <img src="images/main-2.svg" alt="Photo 2" class="photo">
-      <img src="images/main-3.svg" alt="Photo 3" class="photo">
+      <img src="images/flirt.jpg" alt="Photo 1" class="photo">
+      <img src="images/cookie.jpg" alt="Photo 2" class="photo">
+      <img src="images/date.jpg" alt="Photo 3" class="photo">
     </div>
 
     <h1 class="title">Do you love me?</h1>
@@ -24,8 +34,10 @@
     </div>
 
     <p class="hint hidden" id="no-hint"></p>
+    <div class="guilt-popups" id="guilt-popups" aria-live="polite"></div>
   </main>
 
+  <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

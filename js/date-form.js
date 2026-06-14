@@ -53,6 +53,10 @@
 
       showStatus("Sent! I'll see you then.", "success");
       form.reset();
+
+      if (window.LoveAnimations?.confettiBurst) {
+        window.LoveAnimations.confettiBurst(window.innerWidth / 2, window.innerHeight / 2, 120);
+      }
     } catch (err) {
       showStatus("Could not send. Check your webhook URL and try again.", "error");
       console.error(err);
